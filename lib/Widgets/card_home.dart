@@ -23,7 +23,7 @@ class _CardHome extends State<CardHome> {
 
             side: BorderSide(width: 1, color: Colors.black12)),
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.18,
+          height: MediaQuery.of(context).size.height * 0.2,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               color: Colors.white,
@@ -60,7 +60,7 @@ class _CardHome extends State<CardHome> {
                         child: Row(
                           children: [
                             Container(
-                              margin:EdgeInsets.only(left: 30),
+                              //margin:EdgeInsets.only(left: 30),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
@@ -246,7 +246,7 @@ class _CardHome extends State<CardHome> {
               Transform.translate(
                 offset: Offset(0,3),
                 child: Container(
-                  height: 50,
+                  height: 60,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color(0xFF5787A6),
@@ -258,7 +258,7 @@ class _CardHome extends State<CardHome> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Transform.translate(
-                          offset:Offset(10,-90),
+                          offset:Offset(10,-100),
                           child: Container(
                             height: 30,
                             decoration:BoxDecoration(
@@ -282,61 +282,58 @@ class _CardHome extends State<CardHome> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 40),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.event_note_sharp,
-                                color: Colors.white,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 30),
-                                child: Icon(Icons.share, color: Colors.white),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(
-                                    left: 45),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 2, bottom: 1),
-                                  child: RaisedButton(
-                                    onPressed: () {
-                                     /* Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: ( context) => MainChat()
-                                          )
-                                      );*/
-                                    },
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(20)),
-                                    color: Colors.white,
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          'تفاوض الان',
-                                          style: TextStyle(
-                                              color: Color(0xFF5787A6),
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15),
-                                        ),
-                                        SizedBox(
-                                          width: 8,
-                                        ),
-                                        Image.asset(
-                                          'assets/next.png',
-                                          width: 10,
-                                          color: Color(0xFF5787A6),
-                                        ),
-                                      ],
-                                    ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.event_note_sharp,
+                              color: Colors.white,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Icon(Icons.share, color: Colors.white),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: 45),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 2, bottom: 1),
+                                child: RaisedButton(
+                                  onPressed: () {
+                                   /* Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: ( context) => MainChat()
+                                        )
+                                    );*/
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  color: Colors.white,
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'تفاوض الان',
+                                        style: TextStyle(
+                                            color: Color(0xFF5787A6),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15),
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Image.asset(
+                                        'assets/next.png',
+                                        width: 10,
+                                        color: Color(0xFF5787A6),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ]
                   ),

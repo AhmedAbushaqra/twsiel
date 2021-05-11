@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:app_travel/Widgets/drawer_widget.dart';
-//import 'package:app_travel/Widgets/client_drawer2.dart';
+import 'package:twsel/Widgets/client_drawer2.dart';
 import 'package:twsel/Widgets/card_home.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: Text('الرئيسيه',style: TextStyle(color: Colors.white,fontSize: 25,fontFamily: 'beINBlack   ',fontWeight: FontWeight.bold),),
       ),
-      //endDrawer: ClientDrawer2(),
+      endDrawer: ClientDrawer2(),
       body: SingleChildScrollView(
         child: Column(
           children: [
