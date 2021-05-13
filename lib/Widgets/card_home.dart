@@ -1,4 +1,5 @@
 //import 'package:app_travel/Screens/main_chat_screen.dart';
+import 'package:twsel/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class CardHome extends StatefulWidget {
@@ -301,12 +302,12 @@ class _CardHome extends State<CardHome> {
                                     top: 2, bottom: 1),
                                 child: RaisedButton(
                                   onPressed: () {
-                                   /* Navigator.push(
+                                    Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: ( context) => MainChat()
+                                            builder: ( context) => LoginScreen()
                                         )
-                                    );*/
+                                    );
                                   },
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20)),
