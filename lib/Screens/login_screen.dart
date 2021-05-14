@@ -7,6 +7,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStateMixin {
+  
   @override
   Widget build(BuildContext context) {
     var size=MediaQuery.of(context).size;

@@ -14,6 +14,8 @@ class _HomePageState extends State<HomePage> {
   String _dropDownValue;
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         leading:Container(
@@ -134,61 +136,46 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-
-        index: 0,
-        height: 50.0,
+      bottomNavigationBar: _buildBottomBar(),
+      floatingActionButton: SizedBox(
+        width: 60,
+        height: 60,
+        child: FloatingActionButton(
+          backgroundColor: Color(0xFFC9D8E2),
+          child: Container(
+            width: 40,
+              height: 40,
+              decoration: BoxDecoration(shape: BoxShape.circle,color: Color(0xFF5787A6)),
+              child: Icon(Icons.home_outlined,size: 30,color: Colors.white,)),
+          onPressed: (){},
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+  Widget _buildBottomBar() {
+    return BottomAppBar(
+      color: Color(0xFFC9D8E2),
+      shape: CircularNotchedRectangle(),
+      elevation: 1,
+      notchMargin: 8,
+      child: BottomNavigationBar(
         items: [
-          Padding(
-            padding:  EdgeInsets.only(top: 3),
-            child: Column(
-              children: [
-                Icon(Icons.notifications_none, size: 30,color: Color(0xFF3688B8),),
-                Text('تنبيهات',style: TextStyle(color: Color(0xFF3688B8),fontWeight: FontWeight.bold),)
-              ],
-            ),
-          ),
-          Padding(
-            padding:  EdgeInsets.only(top:3),
-            child: Column(
-              children: [
-                Icon(Icons.search, size: 30,color: Color(0xFF3688B8)),
-                Text('ابحث',style: TextStyle(color: Color(0xFF3688B8),fontWeight: FontWeight.bold),)
-              ],
-            ),
-          ),
-          Padding(
-            padding:  EdgeInsets.only(top:3),
-            child: Column(
-              children: [
-                Icon(Icons.home, size: 30,color: Color(0xFF3688B8)),
-              ],
-            ),
-          ),
-          Padding(
-            padding:  EdgeInsets.only(top:3),
-            child: Column(
-              children: [
-                Icon(Icons.work_outline, size: 30,color: Color(0xFF3688B8)),
-                Text('طلباتي',style: TextStyle(color: Color(0xFF3688B8),fontWeight: FontWeight.bold),)
-              ],
-            ),
-          ),
-          Padding(
-            padding:  EdgeInsets.only(top:3),
-            child: Column(
-              children: [
-                Icon(Icons.backpack, size: 30,color: Color(0xFF3688B8)),
-                Text('اطلب',style: TextStyle(color: Color(0xFF3688B8),fontWeight: FontWeight.bold),)
-              ],
-            ),
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications_none, size: 30,color: Color(0xFF5787A6),), label: 'تنبيهات',),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search,size: 30,color: Color(0xFF5787A6),), label: 'ابحث'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.card_travel_sharp,size: 30,color: Color(0xFF5787A6),), label: 'طلباتي'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.assignment_turned_in_sharp,size: 30,color: Color(0xFF5787A6),), label: 'اطلب'),
         ],
-        color: Color(0xFFC9D8E2),
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Color(0xFF3688B8),
-        animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 600),
+        selectedItemColor: Color(0xFF3688B8),
+        unselectedItemColor: Colors.white,
+        backgroundColor: Color(0xFFC9D8E2).withOpacity(0.2),
+        selectedLabelStyle: TextStyle(color: Color(0xFF5787A6),fontWeight: FontWeight.bold,fontSize: 16.0,fontFamily: 'beINNormal'),
+        unselectedLabelStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16.0,fontFamily: 'beINNormal'),
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _page,
         onTap: (index) {
           setState(() {
             _page = index;
