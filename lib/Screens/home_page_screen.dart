@@ -141,6 +141,7 @@ class _HomePageState extends State<HomePage> {
         width: 60,
         height: 60,
         child: FloatingActionButton(
+          elevation: 1,
           backgroundColor: Color(0xFFC9D8E2),
           child: Container(
             width: 40,

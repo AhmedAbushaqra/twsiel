@@ -1,5 +1,6 @@
 import 'package:twsel/Widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:twsel/Screens/register.dart';
 import 'dart:math'as math;
 class LoginScreen extends StatefulWidget {
   @override
@@ -174,9 +175,19 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12),
-                        child: Text('حساب جديد',style: TextStyle(color: Color( 0xFF5786A5),fontSize: 16),),
+                      FlatButton(
+                        onPressed: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ( context) =>Register()
+                              )
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: Text('حساب جديد',style: TextStyle(color: Color( 0xFF5786A5),fontSize: 16),),
+                        ),
                       ),
                       Icon(Icons.person_outline)
                     ],
