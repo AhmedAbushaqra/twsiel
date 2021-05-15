@@ -197,12 +197,12 @@ class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
                   ),
                   child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                       /* Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: ( context) =>PersonalPageScreen3(),
                             ),
-                        );
+                        );*/
                       },
                       child: Text('تفعيل',
                         style: TextStyle(color: Colors.white, fontSize: 18),)),

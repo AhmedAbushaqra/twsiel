@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _page = 0;
   String _dropDownValue;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           margin: EdgeInsets.only(left: 10,top: 5),
           child: Stack(
             children: [
-              Icon(Icons.notifications_none,size: 40,),
+              Icon(Icons.messenger_outline_rounded,size: 35,),
               Container(
                 margin: EdgeInsets.only(left: 25,top: 5),
                 child: CircleAvatar(
@@ -132,56 +131,8 @@ class _HomePageState extends State<HomePage> {
             CardHome(),
             CardHome(),
             CardHome()
-
           ],
         ),
-      ),
-      bottomNavigationBar: _buildBottomBar(),
-      floatingActionButton: SizedBox(
-        width: 60,
-        height: 60,
-        child: FloatingActionButton(
-          elevation: 1,
-          backgroundColor: Color(0xFFC9D8E2),
-          child: Container(
-            width: 40,
-              height: 40,
-              decoration: BoxDecoration(shape: BoxShape.circle,color: Color(0xFF5787A6)),
-              child: Icon(Icons.home_outlined,size: 30,color: Colors.white,)),
-          onPressed: (){},
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    );
-  }
-  Widget _buildBottomBar() {
-    return BottomAppBar(
-      color: Color(0xFFC9D8E2),
-      shape: CircularNotchedRectangle(),
-      elevation: 1,
-      notchMargin: 8,
-      child: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.notifications_none, size: 30,color: Color(0xFF5787A6),), label: 'تنبيهات',),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.search,size: 30,color: Color(0xFF5787A6),), label: 'ابحث'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.card_travel_sharp,size: 30,color: Color(0xFF5787A6),), label: 'طلباتي'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.assignment_turned_in_sharp,size: 30,color: Color(0xFF5787A6),), label: 'اطلب'),
-        ],
-        selectedItemColor: Color(0xFF3688B8),
-        unselectedItemColor: Colors.white,
-        backgroundColor: Color(0xFFC9D8E2).withOpacity(0.2),
-        selectedLabelStyle: TextStyle(color: Color(0xFF5787A6),fontWeight: FontWeight.bold,fontSize: 16.0,fontFamily: 'beINNormal'),
-        unselectedLabelStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16.0,fontFamily: 'beINNormal'),
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _page,
-        onTap: (index) {
-          setState(() {
-            _page = index;
-          });
-        },
       ),
     );
   }

@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 //import 'Screens/connect_with_screen.dart';
 //import 'package:app_travel/Screens/cart_screen.dart';
 //import 'package:app_travel/Screens/calendar_date_screen.dart';
-import 'package:twsel/Screens/home_page_screen.dart';
+import 'package:twsel/Screens/main_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:HomePage(),
+      home:MainScreen(),
     );
   }
 }
