@@ -7,217 +7,200 @@ class CodeVerificationScreen  extends StatefulWidget {
 class _CodeVerificationScreenState extends State<CodeVerificationScreen> {
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Stack(
-              children: [
-                ClipPath(
-                  clipper: CustomShapeBorder(),
-                  child: Container(
-                    width: double.infinity,
-                    height: MediaQuery
-                        .of(context)
-                        .size
-                        .height * .42,
-                    color: Color(0xFF5787A6),
+            Container(
+              width: width,
+              height: height*0.35,
+              child: Stack(
+                children: [
+                  ClipPath(
+                    clipper: CustomShapeBorder(),
+                    child: Container(
+                      width: width,
+                      color: Color(0xFF5787A6),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 80, left: 60),
-                  child: Image.asset('assets/qwer.png'),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 90, left: 230),
-                  child: Text('توصيل مع', style: TextStyle(color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25),),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 170, left: 240),
-                  child: Image.asset('assets/Layer6.png'),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 170, left: 50),
-                  child: Image.asset('assets/Unt5.png', height: 100,),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 300, left: 90),
-                  child: Text('تم ارسال الكود الي الرقم التالي ',
-                    style: TextStyle(color: Color(0xFF3688B8),
-                        fontFamily: 'beINBlack',
-                        fontSize: 20),),
-                ),
-
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 86, top: 10),
-                  child: Icon(Icons.phone_android_outlined, size: 40,
-                    color: Color(0xFF3688B8),),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40, top: 10),
-                  child: Text('336  ** ** ** 68',
-                    style: TextStyle(color: Colors.black, fontSize: 18),),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 40),
-                  child: Container(
-                    height: 50,
-                    width: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xFF3688B8),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20,vertical: height*0.05),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            GestureDetector(
+                              onTap: ()=> Navigator.pop(context),
+                                child: Image.asset('assets/qwer.png')),
+                            Text('توصيل مع', style: TextStyle(color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25),),
+                          ],
                         ),
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: TextField(
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: Color(0xFF5787A6),
-                            ),
-
-                          )
-                      ),
+                        Image.asset('assets/Layer6.png'),
+                      ],
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 25),
-                  child: Container(
-                    height: 50,
-                    width: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xFF3688B8),
-                        ),
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: TextField(
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: Color(0xFF5787A6),
-                            ),
-
-                          )
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 25),
-                  child: Container(
-                    height: 50,
-                    width: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xFF3688B8),
-                        ),
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: TextField(
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: Color(0xFF5787A6),
-                            ),
-
-                          )
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 25),
-                  child: Container(
-                    height: 50,
-                    width: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Color(0xFF3688B8),
-                        ),
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: TextField(
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: Color(0xFF5787A6),
-                            ),
-
-                          )
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: Text('اعادة الارسال بعد 120 ثانيه', style: TextStyle(
-                  color: Color(0xFF3688B8),
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'beINBlack'),),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Container(
-                height: 40,
-                width: 100,
-                child: RaisedButton(
-                  onPressed: () {},
-                  color: Color(0xFF5786A5),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: GestureDetector(
-                      onTap: () {
-                       /* Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ( context) =>PersonalPageScreen3(),
-                            ),
-                        );*/
-                      },
-                      child: Text('تفعيل',
-                        style: TextStyle(color: Colors.white, fontSize: 18),)),
-                ),
+                  Positioned(
+                    bottom: 50.0,
+                      left: 50.0,
+                      child: Image.asset('assets/Unt5.png', height: 100,)),
+                ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 5, left: 20),
-              child: Text('المحاوله  4  !!  ..  اعد', style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),),
+            Container(
+              height: height*0.5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('تم ارسال الكود الي الرقم التالي ',
+                  style: TextStyle(color: Color(0xFF3688B8),
+                      fontFamily: 'beINBlack',
+                      fontSize: 20),),
+                  Container(
+                    width: width*0.45,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.phone_android_outlined, size: 40,
+                          color: Color(0xFF3688B8),),
+                        Text('336  ** ** ** 68',
+                          style: TextStyle(color: Colors.black, fontSize: 18),)
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: width*0.8,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                )
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 50,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF5787A6),
+                                  ),
+
+                                )
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 50,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF5787A6),
+                                  ),
+
+                                )
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 50,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF5787A6),
+                                  ),
+
+                                )
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: width*0.6,
+                    height: height*0.1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('اعادة الارسال بعد 120 ثانيه', style: TextStyle(
+                            color: Color(0xFF3688B8),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'beINBlack'),),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 100,
+                    child: RaisedButton(
+                      onPressed: () {},
+                      color: Color(0xFF5786A5),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: GestureDetector(
+                          onTap: () {
+                            /* Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ( context) =>PersonalPageScreen3(),
+                          ),
+                      );*/
+                          },
+                          child: Text('تفعيل',
+                            style: TextStyle(color: Colors.white, fontSize: 18),)),
+                    ),
+                  ),
+                  Text('المحاوله  4  !!  ..  اعد',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),),
+                ],
+              ),
             ),
-
-
           ],
         ),
       ),
