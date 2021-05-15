@@ -19,9 +19,7 @@ class _CardHome extends State<CardHome> {
               topRight: Radius.circular(10),
               bottomLeft: Radius.circular(10),
               topLeft: Radius.circular(10),
-
             ),
-
             side: BorderSide(width: 1, color: Colors.black12)),
         child: Container(
           height: MediaQuery.of(context).size.height * 0.2,
