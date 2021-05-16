@@ -120,7 +120,7 @@ class _RegisterState extends State<Register> {
                             ),
                           ),
                           SizedBox(
-                            width: width*0.65,
+                            width: width*0.75,
                             height: height*0.07,
                             child: TextFormField(
                               keyboardType: TextInputType.phone,

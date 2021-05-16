@@ -195,10 +195,13 @@ class _CardHome extends State<CardHome> {
                         padding: const EdgeInsets.only(left:25),
                         child: Stack(
                           children: [
-                            CircleAvatar(
-                              radius: 35,
-                              backgroundImage: AssetImage('assets/circle1.png',),
-                              backgroundColor: Colors.grey.shade50,
+                            GestureDetector(
+                              // onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => SelectProfilePic(),)),
+                              child: CircleAvatar(
+                                radius: 35,
+                                backgroundImage: AssetImage('assets/circle1.png',),
+                                backgroundColor: Colors.grey.shade50,
+                              ),
                             ),
                             Transform.translate(
                                 offset: Offset(5,50),
