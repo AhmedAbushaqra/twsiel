@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:twsel/Widgets/drawer_widget.dart';
 import 'package:twsel/Widgets/myrequest.dart';
+import 'package:twsel/Dialogs/delete_finished_dialog.dart';
 
 class MyRequestAndOfferScreen extends StatefulWidget {
   @override
@@ -54,7 +55,14 @@ class _MyRequestAndOfferScreenState extends State<MyRequestAndOfferScreen> {
                         borderRadius: BorderRadius.circular(10),
                         side: BorderSide(color: Color(0xFF3688B8)),
                       ),
-                      onPressed: (){},
+                      onPressed: (){
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return DeleteFinishedDialog();
+                          },
+                        );
+                      },
                       child: Text('احذف المنتهي',style: TextStyle(color: Color(0xFF9DA617),fontWeight: FontWeight.bold,fontSize: 14),),
                     ),
                   ),

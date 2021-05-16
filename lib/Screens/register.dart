@@ -92,14 +92,14 @@ class _RegisterState extends State<Register> {
             Container(
               height: height*0.55,
               child: Padding(
-                padding:  EdgeInsets.symmetric(horizontal: width*0.05,vertical: 10.0),
+                padding:  EdgeInsets.symmetric(horizontal: width*0.017,vertical: 10.0),
                 child: Form(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           SizedBox(
                             width: width*0.2,
@@ -220,18 +220,21 @@ class _RegisterState extends State<Register> {
                         ),
                       ),
                       SizedBox(height: 10.0,),
-                      Row(
-                        children: [
-                          Text('لقد اطلعت علي سياسة التطبيق واتعهد بالالتزام بها',style: TextStyle(color: Color( 0xFF5786A5),fontSize: 16),),
-                          Checkbox(
-                            value: _checkbox,
-                            onChanged: (value) {
-                              setState(() {
-                                _checkbox = !_checkbox;
-                              });
-                            },
-                          ),
-                        ],
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: Row(
+                          children: [
+                            Checkbox(
+                              value: _checkbox,
+                              onChanged: (value) {
+                                setState(() {
+                                  _checkbox = !_checkbox;
+                                });
+                              },
+                            ),
+                            Text('لقد اطلعت علي سياسة التطبيق واتعهد بالالتزام بها',style: TextStyle(color: Color( 0xFF5786A5),fontSize: 16),),
+                          ],
+                        ),
                       ),
                       RaisedButton(
                         onPressed: (){
