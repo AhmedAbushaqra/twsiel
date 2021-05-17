@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:twsel/Widgets/drawer_widget.dart';
 import 'package:twsel/Widgets/myrequest.dart';
 import 'package:twsel/Dialogs/delete_finished_dialog.dart';
+import 'package:twsel/Widgets/offer.dart';
 
 class MyRequestAndOfferScreen extends StatefulWidget {
   @override
@@ -137,9 +138,20 @@ class _MyRequestAndOfferScreenState extends State<MyRequestAndOfferScreen> {
                 ),
             MyRequest(),
               ],
-            ):Center(
-              child: Text('العروض'),
-            ),
+            ):Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 20),
+                  width: MediaQuery.of(context).size.width,
+                  child: Text(
+                    ' عروض المسافرين',
+                    style: TextStyle(color:Color(0xFF3688B8),fontWeight: FontWeight.bold,fontSize: 23,),
+                    textAlign: TextAlign.end,
+                  ),
+                ),
+                Offers(),
+              ],
+            )
           ],
         ),
       ),
