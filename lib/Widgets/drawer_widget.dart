@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twsel/Screens/personal_page_screen.dart';
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,8 @@ class MyDrawer extends StatelessWidget {
               child: Text('الصفحه الرئيسيه'),
             ),
             trailing: Icon(Icons.home_outlined),
-
+            onTap: (){
+            },
           ),
           ListTile(
             leading : Icon(Icons.navigate_before),
@@ -70,6 +72,14 @@ class MyDrawer extends StatelessWidget {
               padding: const EdgeInsets.only(left: 80),
               child: Text('الصفحه الشخصيه'),
             ),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ( context) => PersonalScreen()
+                  )
+              );
+            },
           ),
           ListTile(
             leading  : Icon(Icons.navigate_before),

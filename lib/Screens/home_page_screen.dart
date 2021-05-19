@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 //import 'package:app_travel/Widgets/drawer_widget.dart';
 import 'package:twsel/Widgets/client_drawer2.dart';
 import 'package:twsel/Widgets/card_home.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override
